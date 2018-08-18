@@ -33,7 +33,7 @@ class Theme extends BaseController
     {
         (new CheckIds())->toCheck();
         $res = ThemeModel::getThemeByIds(explode(',', $ids));
-        if (!$res) {
+        if ($res->isEmpty()) {
             throw new NoThemeFound();
         }
         return $res;

@@ -66,7 +66,7 @@ class Theme extends BaseModel
      */
     public static function getThemeDetailById($id)
     {
-        return self::with('products,topImg,headImg')->find($id);
+        return self::with('topImg,headImg,products')->find($id);
 
     }
 

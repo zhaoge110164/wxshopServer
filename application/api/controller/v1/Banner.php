@@ -30,11 +30,11 @@ class Banner extends BaseController
     public function getBanner($id)
     {
         (new CheckId())->toCheck(); //validate 拦截
-        $result = BannerModel::getBannerById($id);
-        if (!$result) {
+        $res = BannerModel::getBannerById($id);
+        if (!$res) {
             throw new NoBannerFound();
         }
-        return $result;
+        return $res;
 
     }
 

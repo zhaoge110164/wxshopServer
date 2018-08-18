@@ -14,13 +14,25 @@
 
 use think\Route;
 
-//轮播图接口
+/*轮播图接口*/
 
+//id(banner位id)获取轮播图
 Route::get('api/:version/banner/:id', 'api/:version.Banner/getBanner');
 
-//主题接口
-
+/*主题接口*/
+//ids获取主题
 Route::get('api/:version/theme', 'api/:version.Theme/getThemeByIds');
-//主题详情
+//id 获取主题详情
 Route::get('api/:version/theme/:id', 'api/:version.Theme/getThemeDetail');
+
+/*商品接口*/
+//获取分类下的商品
+Route::get('api/:version/product/byCategory/:id', 'api/:version.product/getByCategory');
+//获取最新商品
+Route::get('api/:version/product/latest', 'api/:version.Product/getLatestProduct');
+
+/*分类接口*/
+//获取所有分类
+Route::get('api/:version/category/getall', 'api/:version.category/getAll');
+
 

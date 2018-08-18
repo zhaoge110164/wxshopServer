@@ -8,8 +8,7 @@
 namespace app\lib\exception;
 class NoBannerFound extends NoResourcesFound
 {
-    public $code = 404;
-    public $msg = '请求bannner数据不存在';
+    public $msg = '请求banner数据不存在';
     public $errorCode = 40000;
 
 
