@@ -15,8 +15,7 @@ class NoResourcesFound extends BaseException
 {
     public $code = 404;
     public $msg = 'no resources found';
-    public $errorCode= 10001;
-
+    public $errorCode = 10001;
 
 
 }

@@ -8,7 +8,7 @@
 
 //自定义配置文件
 return array(
-    'root_domain'=>'http://www.shopserver.com',//根域名
-    'banner_img_dir'=>DIRECTORY_SEPARATOR.'images' //banner 图存放本地位置
+    'root_domain' => 'http://www.shopserver.com',//根域名
+    'banner_img_dir' => DIRECTORY_SEPARATOR . 'images' //banner 图存放本地位置
 
 );

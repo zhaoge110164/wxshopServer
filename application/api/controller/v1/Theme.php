@@ -29,10 +29,11 @@ class Theme extends BaseController
      * @throws
      * @return  object 多个theme
      */
-    public function getThemeByIds($ids=''){
+    public function getThemeByIds($ids = '')
+    {
         (new CheckIds())->toCheck();
-        $res= ThemeModel::getThemeByIds(explode(',',$ids));
-        if(!$res){
+        $res = ThemeModel::getThemeByIds(explode(',', $ids));
+        if (!$res) {
             throw new NoThemeFound();
         }
         return $res;
@@ -46,10 +47,11 @@ class Theme extends BaseController
      * @throws
      * @return  object theme详情
      */
-    public function getThemeDetail($id){
+    public function getThemeDetail($id)
+    {
         (new CheckId())->toCheck(); //validate 拦截 检测id
         $res = ThemeModel::getThemeDetailById($id);
-        if(!$res){
+        if (!$res) {
             throw new NoThemeFound();
         }
         return $res;

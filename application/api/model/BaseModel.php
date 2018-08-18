@@ -6,6 +6,7 @@
  * Time: 16:21
  */
 namespace app\api\model;
+
 use think\Model;
 
 /**
@@ -22,12 +23,13 @@ class BaseModel extends Model
      * @param $data array 所有字段数据的数组
      * @return  string url 完整路径
      */
-    protected function  UrlToUsable($value,$data){
-        $url=$value;
-        if($data['from']==1){
+    protected function UrlToUsable($value, $data)
+    {
+        $url = $value;
+        if ($data['from'] == 1) {
             //配置文件获取根域名和图片文件路径
-            $img_url_root= config('z_config.root_domain').config('z_config.banner_img_dir');
-            $url = $img_url_root.$value;
+            $img_url_root = config('z_config.root_domain') . config('z_config.banner_img_dir');
+            $url = $img_url_root . $value;
         }
         return $url;
 

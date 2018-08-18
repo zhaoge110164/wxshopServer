@@ -9,8 +9,8 @@ namespace app\api\validate;
 class checkIds extends BaseValidate
 {
 
-    protected $rule=['ids'=>'require|toCheckIds'];
-    protected $message= ['ids'=>'ids必须为逗号分隔的正整数'];
+    protected $rule = ['ids' => 'require|toCheckIds'];
+    protected $message = ['ids' => 'ids必须为逗号分隔的正整数'];
 
     /**
      * @param $value
@@ -18,19 +18,20 @@ class checkIds extends BaseValidate
      * 验证ids
      */
 
-     protected function toCheckIds($value){
-         $idsArr=explode(',',$value);
-         if(empty($idsArr)){
-             return false;
-         }
-         foreach($idsArr as $id){
-             if(!$this->isPositiveInt($id)){ //判断正整数
-                 return false;
-             }
-         }
-         return true;
+    protected function toCheckIds($value)
+    {
+        $idsArr = explode(',', $value);
+        if (empty($idsArr)) {
+            return false;
+        }
+        foreach ($idsArr as $id) {
+            if (!$this->isPositiveInt($id)) { //判断正整数
+                return false;
+            }
+        }
+        return true;
 
-     }
+    }
 
 
 }

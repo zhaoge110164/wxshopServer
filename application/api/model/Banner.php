@@ -7,6 +7,7 @@
  */
 
 namespace app\api\model;
+
 use think\model;
 
 /**
@@ -17,15 +18,16 @@ use think\model;
 class Banner extends BaseModel
 {
     //隐藏字段
-    protected $hidden =['delete_time','update_time'];
+    protected $hidden = ['delete_time', 'update_time'];
 
     /**
      * @return model\relation\HasMany
      * 关联banner_item 表 获取
      */
-    public function item(){
+    public function item()
+    {
         //hasMany 一对多关系
-        return $this->hasMany('BannerItem','banner_id','id');
+        return $this->hasMany('BannerItem', 'banner_id', 'id');
     }
 
     /**
@@ -34,8 +36,9 @@ class Banner extends BaseModel
      * 通过banner.id 获取banner 信息
      */
 
-    public static function  getBannerById($id){
-        $res= self::with(['item','item.img'])->find($id);
+    public static function getBannerById($id)
+    {
+        $res = self::with(['item', 'item.img'])->find($id);
         return $res;
 
     }

@@ -18,8 +18,8 @@ require __DIR__ . '/../thinkphp/start.php';
 
 //记录 sql 日志
 \think\log::init([
-    'type'=> 'File',
-    'path'=>LOG_PATH.DIRECTORY_SEPARATOR.'Sql_',
-    'level'=>['sql']
+    'type' => 'File',
+    'path' => LOG_PATH . DIRECTORY_SEPARATOR . 'Sql_',
+    'level' => ['sql']
 
 ]);

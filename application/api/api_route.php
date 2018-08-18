@@ -16,11 +16,11 @@ use think\Route;
 
 //轮播图接口
 
-Route::get('api/:version/banner/:id','api/:version.Banner/getBanner');
+Route::get('api/:version/banner/:id', 'api/:version.Banner/getBanner');
 
 //主题接口
 
-Route::get('api/:version/theme','api/:version.Theme/getThemeByIds');
+Route::get('api/:version/theme', 'api/:version.Theme/getThemeByIds');
 //主题详情
-Route::get('api/:version/theme/:id','api/:version.Theme/getThemeDetail');
+Route::get('api/:version/theme/:id', 'api/:version.Theme/getThemeDetail');
 

@@ -7,6 +7,7 @@
  */
 
 namespace app\api\validate;
+
 use app\lib\exception\ParamsException;
 use think\Validate;
 use think\Request;
@@ -14,7 +15,6 @@ use think\Request;
 /**
  * 验证器基类
  */
-
 class BaseValidate extends Validate
 {
     /**
@@ -23,35 +23,36 @@ class BaseValidate extends Validate
      * @return  true 通过验证
      *
      */
-   public function toCheck(){
+    public function toCheck()
+    {
 
-       //通过Request对象获取提交的所有参数变量
-       $request=Request::instance();//初始化Request对象
-       $params = $request -> param();//获取提交的参数
+        //通过Request对象获取提交的所有参数变量
+        $request = Request::instance();//初始化Request对象
+        $params = $request->param();//获取提交的参数
 
-       if(!$this->check($params)){//未通过检测抛出自定义的参数异常
-           //判断处理 多个错误消息（数组）
-           $msg=$this->error;
-           $msg= is_array($msg) ? implode(';',$msg) :$msg;
-           $exception= new ParamsException(array('msg'=>$msg));
-           throw $exception;
+        if (!$this->check($params)) {//未通过检测抛出自定义的参数异常
+            //判断处理 多个错误消息（数组）
+            $msg = $this->error;
+            $msg = is_array($msg) ? implode(';', $msg) : $msg;
+            $exception = new ParamsException(array('msg' => $msg));
+            throw $exception;
 
-       }
-       return true;
-   }
+        }
+        return true;
+    }
 
 
     /**
      * 检测正整数
      * */
-    protected function isPositiveInt($value,$rule='',$data='',$field=''){
-        if(is_numeric($value) && is_int($value+0) && ($value+0) > 0){
+    protected function isPositiveInt($value, $rule = '', $data = '', $field = '')
+    {
+        if (is_numeric($value) && is_int($value + 0) && ($value + 0) > 0) {
             return true;
         }
         return false;
 
     }
-
 
 
 }

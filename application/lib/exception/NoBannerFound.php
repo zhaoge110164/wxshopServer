@@ -10,8 +10,7 @@ class NoBannerFound extends NoResourcesFound
 {
     public $code = 404;
     public $msg = '请求bannner数据不存在';
-    public $errorCode= 40000;
-
+    public $errorCode = 40000;
 
 
 }

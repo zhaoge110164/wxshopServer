@@ -14,6 +14,6 @@ class ParamsException extends BaseException
 {
     public $code = 400; //返回的http错误码
     public $msg = 'invalid parameter';//错误消息
-    public $errorCode = 10000 ; //自定义错误码
+    public $errorCode = 10000; //自定义错误码
 
 }

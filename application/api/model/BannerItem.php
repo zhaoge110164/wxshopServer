@@ -7,6 +7,7 @@
  */
 
 namespace app\api\model;
+
 use think\model;
 
 /**
@@ -18,14 +19,16 @@ class BannerItem extends BaseModel
 {
 
     //隐藏字段
-    protected $hidden =['id','img_id','banner_id','delete_time','update_time'];
+    protected $hidden = ['id', 'img_id', 'banner_id', 'delete_time', 'update_time'];
+
     /**
      * @return model\relation\BelongsTo
      * 关联image表获取图片数据
      */
-    public function img(){
+    public function img()
+    {
         //belongsTo 一对一关系
-        return $this->belongsTo('Image','img_id','id');
+        return $this->belongsTo('Image', 'img_id', 'id');
     }
 
 

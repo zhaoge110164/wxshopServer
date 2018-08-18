@@ -6,6 +6,7 @@
  * Time: 13:05
  */
 namespace app\api\model;
+
 use think\model;
 
 /**
@@ -15,8 +16,8 @@ use think\model;
  */
 class Product extends BaseModel
 {
-    //隐藏字段
-    protected $hidden =['delete_time','update_time','topic_img_id','head_img_id','category_id'
-    ,'from','create_time','img_id','pivot'];
+    //隐藏字段 'pivot'为框架本身产生的中间表数据
+    protected $hidden = ['delete_time', 'update_time', 'topic_img_id', 'head_img_id', 'category_id'
+        , 'from', 'create_time', 'img_id', 'pivot'];
 
 }
