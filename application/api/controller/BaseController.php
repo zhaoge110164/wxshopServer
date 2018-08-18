@@ -8,6 +8,11 @@
 namespace app\api\controller;
 use think\Controller;
 
+/**
+ * Class BaseController
+ * @package app\api\controller
+ * api控制器基础类
+ */
 class BaseController extends Controller
 {
 

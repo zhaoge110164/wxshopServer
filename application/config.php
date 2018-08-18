@@ -91,7 +91,7 @@ return [
     // 路由使用完整匹配
     'route_complete_match'   => true,
     // 路由配置文件（支持配置多个）
-    'route_config_file'      => ['route'],
+    'route_config_file'      => ['route','api/api_route'],
     // 是否强制使用路由
     'url_route_must'         => true,
     // 域名部署
@@ -164,11 +164,11 @@ return [
 
     'log'                    => [
         // 日志记录方式，内置 file socket 支持扩展
-        'type'  => 'test',
+        'type'  => 'test', //设置test关闭tp5自动生成日志
         // 日志保存目录
         'path'  => LOG_PATH,
         // 日志记录级别
-        'level' => [],
+        'level' => ['sql'],
     ],
 
     // +----------------------------------------------------------------------

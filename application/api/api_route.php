@@ -14,9 +14,13 @@
 
 use think\Route;
 
-/**
- * banner 相关接口路由
- */
-//Route::get('api/banner','api/v1.Banner/getBanner');
+//轮播图接口
 
+Route::get('api/:version/banner/:id','api/:version.Banner/getBanner');
+
+//主题接口
+
+Route::get('api/:version/theme','api/:version.Theme/getThemeByIds');
+//主题详情
+Route::get('api/:version/theme/:id','api/:version.Theme/getThemeDetail');
 

@@ -18,6 +18,9 @@ class CheckId extends BaseValidate
         //id 必填且为正整数
         'id'=> 'require|isPositiveInt',
     ];
+    protected $message= ['id'=>'id必须为正整数'];
+
+
 
 
 }

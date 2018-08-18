@@ -69,7 +69,7 @@ class ExceptionHandler extends Handle
 
         Log::init([ //日志初始化
             'type' => 'File',
-            'path' =>LOG_PATH,
+            'path' =>LOG_PATH.DIRECTORY_SEPARATOR.'Error_',
             'level'=>['error']
         ]);
 
